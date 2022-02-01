@@ -10,9 +10,11 @@ python setup.py build_ext -i
 flame_model_path = '../flame_head_model/FLAME2020/generic_model.pkl'
 ```
 2. 渲染人头
+
 ```python
 python render_flame_head_model.py
 ```
+
 可以得到一个渲染后的人头模型
 
 ![](example.png)

@@ -24,4 +24,5 @@ pose_params_numpy = np.array([[0, 0, 0.0, 0.0, 0, 0],
 ```
 前三个参数为人头的pitch，yaw，roll控制参数，第4个为张嘴的参数jaw。
 参考链接：
-[face3d](git://github.com/YadiraF/face3d.git)
+
+[face3d](https://github.com/YadiraF/face3d)

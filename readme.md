@@ -14,7 +14,9 @@ flame_model_path = '../flame_head_model/FLAME2020/generic_model.pkl'
 python render_flame_head_model.py
 ```
 可以得到一个渲染后的人头模型
+
 ![](example.png)
+
 flame人头模型有几个参数可以调整：
 ```python
 pose_params_numpy = np.array([[0, 0, 0.0, 0.0, 0, 0],

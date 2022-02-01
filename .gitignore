@@ -1,0 +1,5 @@
+__pycache__/
+build/
+mesh/cython/mesh_core_cython.cpp
+mesh/cython/mesh_core_cython.cpython-36m-x86_64-linux-gnu.so
+tmp.obj

@@ -42,18 +42,17 @@ def run():
     # 6 params.[pitch, yaw,roll, jaw, unknown, unknown]
     pose_params_numpy = np.array([[np.pi / 4, np.pi/3, 0.0, 0.0, 0, 0],
                                     ], dtype=np.float32)
-    pose_params = torch.tensor(pose_params_numpy, dtype=torch.float32).cuda()
+    pose_params = torch.tensor(pose_params_numpy, dtype=torch.float32)
 
     # Cerating a batch of neutral expressions
-    expression_params = torch.zeros(1, 50, dtype=torch.float32).cuda()
+    expression_params = torch.zeros(1, 50, dtype=torch.float32)
     neck_pose = np.array([[0, 0, 0]], np.float32)
     # pitch, yaw, roll
     # neck_pose = np.array([[0, np.pi/4, np.pi/4]], np.float32)
-    neck_pose = torch.from_numpy(neck_pose).cuda()
+    neck_pose = torch.from_numpy(neck_pose)
     flame_model = FLAME(flame_model_path)
-    flame_model.cuda()
 
-    shape_params = torch.zeros(1, 100).cuda()
+    shape_params = torch.zeros(1, 100)
     # Forward Pass of FLAME, one can easily use this as a layer in a Deep learning Framework 
     vertices = flame_model(shape_params, expression_params, pose_params, neck_pose).cpu().numpy().squeeze() # For RingNet project
     # torch.Size([1, 5023, 3])
